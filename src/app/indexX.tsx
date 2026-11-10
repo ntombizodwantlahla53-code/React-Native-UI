@@ -1,12 +1,14 @@
-import { apptabs as AppTabs } from "@/components/apptabs/apptabs";
+import { Apptabs as AppTabs } from "./../components/Apptabs/Apptabs"
 import { Text, View } from "react-native";
-import classes from './indexX.module.css';
+import classes from './IndexX.module.css';
 
 export default function HomeScreen() {
   return (
-    <View className={classes.container}>
+    <div className={classes.container}>
+    <View>
       <AppTabs />
     </View>
+    </div>
   );
 }
 {
