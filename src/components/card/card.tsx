@@ -17,6 +17,9 @@ export function card() {
           <AntDesign style={styles.twoicons} name="plus-square" size={24} color="black" />
         </View>     
       </View>
+      <TouchableOpacity style={styles.buyNowBtn} activeOpacity={0.8}>
+        <Text style={styles.buyNowText}>Buy Now</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -76,6 +79,20 @@ const styles = StyleSheet.create({
     color: "#111111",
     fontSize: 30,
     marginTop:20
-  }
+  },
+  buyNowBtn: {
+    backgroundColor: "#FBC528",
+    borderRadius: 30,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 54,
+    marginTop:5,
+    margin:26
+  },
+  buyNowText: {
+    fontFamily: "PlusJakartaSans_700Bold",
+    color: "#111111",
+    fontSize: 20,
+  },
 
 });
