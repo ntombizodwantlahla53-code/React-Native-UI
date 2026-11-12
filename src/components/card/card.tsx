@@ -1,55 +1,44 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View ,TouchableOpacity} from "react-native";
 // import { MdOutlineArrowBackIos } from "react-icons/md";
-import AntDesign from '@expo/vector-icons/AntDesign';
+import AntDesign from "@expo/vector-icons/AntDesign";
+import * as Jakarta from "@expo-google-fonts/plus-jakarta-sans";
 
 export function card() {
+  const [loaded] = Jakarta.useFonts(Jakarta);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Relax 30 {"\n"}Dissolvable Wafers</Text>
       <Text style={styles.mg}>250mg</Text>
-      <View style={styles.headerRow}>
-      <Text style={styles.price}>$25.50</Text>
-      <View style={styles.rightSide}>
-      <AntDesign name="minus-square" size={24} color="black" />
-      <Text style={styles.price}>2</Text>
-     <AntDesign name="plus-square" size={24} color="black" />
-      </View>
-      </View>
-      <Button title="Buy Now" color="yellow"></Button>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
+    fontFamily: "PlusJakartaSans_700Bold",
     backgroundColor: "white",
     marginTop: -20,
     borderRadius: 25,
   },
   title: {
-    fontFamily: "Arial",
+    fontFamily: "PlusJakartaSans_700Bold",
     fontWeight: "bold",
     color: "#111111",
-    fontSize: 50,
-    padding: 10,
+    fontSize: 40,
+    padding: 28,
+
   },
   mg: {
+    fontFamily: "PlusJakartaSans_700Bold",
     color: "#96877c",
     fontSize: 20,
-    padding: 10,
+    padding:28,
+    marginTop:-40,
   },
   price: {
+    fontFamily: "PlusJakartaSans_700Bold",
     color: "#111111",
-    fontSize: 50,
-    padding: 10,
+    fontSize: 40,
+    fontWeight: "bold",
   },
-  headerRow: {
-  flexDirection: "row",
-  alignItems: "flex-end",
-  paddingHorizontal: 15,
-},
-rightSide: {
-  flexDirection: "row",
-  justifyContent: "flex-end",
-  gap: 15,
-},
+
 });
