@@ -23,8 +23,12 @@ export function Apptabs() {
               <Ionicons name="aperture-outline" size={45} color="black" />
               <Text style={styles.title}>xefag </Text>
             </View>
-              
+               <View style={styles.rightSide}>
+                <FontAwesome5 style={styles.user} name="user" size={20} color="white" />
+                <FontAwesome5 style={styles.basket} name="shopping-basket" size={20} color="black"/>
+              </View>
         </View>
+
         </View>
       </ImageBackground>
     </View>
@@ -70,5 +74,27 @@ leftSide: {
     borderRadius: 6,
     marginTop:-5
   },
-
+rightSide: {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  gap: 15,
+},
+  user:{
+    backgroundColor: '#B5942C',
+  borderRadius: 25,
+  width: 50,
+  height: 50,
+  textAlign: "center",
+  textAlignVertical: "center",
+  fontWeight: "bold",
+  },
+  basket:{
+    backgroundColor: "white",
+  borderRadius: 25,
+  width: 50,
+  height: 50,
+  textAlign: "center",
+  textAlignVertical: "center",
+  fontWeight: "bold",
+  },
 });
