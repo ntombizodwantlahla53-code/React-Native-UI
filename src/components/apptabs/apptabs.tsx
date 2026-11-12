@@ -16,28 +16,34 @@ export function Apptabs() {
         source={require("../../../assets/images/tabIcons/pharmacy.jpg")}
         style={styles.background}
       >
-        <View style={styles.overlay}>
+     <View style={styles.overlay}>
           <View style={styles.headerRow}>
-            <View style={styles.leftSide}>
-              <Entypo style={styles.back} name="chevron-left" size={29} color="black" />
-              <Ionicons name="aperture-outline" size={45} color="black" />
-              <Text style={styles.title}>xefag </Text>
-            </View>
+                <View style={styles.leftSide}>
+                  <Entypo style={styles.back} name="chevron-left" size={29} color="black" />
+                  <Ionicons name="aperture-outline" size={45} color="black" />
+                  <Text style={styles.title}>xefag </Text>
+                </View>
                <View style={styles.rightSide}>
                 <FontAwesome5 style={styles.user} name="user" size={20} color="white" />
                 <FontAwesome5 style={styles.basket} name="shopping-basket" size={20} color="black"/>
               </View>
-        </View>
-        <View style={styles.subtitle}>
-          <Text style={styles.relax}>
-            <MaterialCommunityIcons name="leaf-circle-outline" size={24} color="black" />
-            Relax</Text>
-
-         <Text style={styles.sleep}>
-          <Octicons style={styles.sleep} name="moon" size={24} color="black" />
-          Sleep</Text>
           </View>
-        </View>
+          <View style={styles.subtitle}>
+            <Text style={styles.relax}>
+              <MaterialCommunityIcons name="leaf-circle-outline" size={24} color="black" />
+              Relax
+            </Text>
+              <Text style={styles.sleep}>
+                <Octicons style={styles.sleep} name="moon" size={24} color="black" />
+                Sleep
+              </Text>
+          </View>
+               <View style={styles.numbersContainer}>
+                  <Text style={styles.firstNumber}>30</Text>
+                  <Text style={styles.secondNumber}>60</Text>
+                  <Text style={styles.thirdNumber}>90</Text>
+              </View>
+     </View>
       </ImageBackground>
     </View>
   );
@@ -122,5 +128,48 @@ rightSide: {
   fontFamily: "PlusJakartaSans_700Bold",
     fontWeight:"bold",
     fontSize: 20,
+  },
+    numbersContainer:{
+     alignItems: "flex-end",
+     marginLeft: 20,
+     marginTop: -60,
+     gap: 10,
+     padding: 10,
+     margin:15
+  },
+  firstNumber: {
+    fontSize: 30,
+  backgroundColor: "black",
+  color:"#FBC528",
+  borderWidth: 1,
+  borderRadius: 25,
+  width: 50,
+  height: 50,
+  textAlign: "center",
+  textAlignVertical: "center",
+  fontWeight: "bold",
+  },
+  secondNumber: {
+  backgroundColor:'#B5942C',
+fontSize: 30,
+  color:"#FBC528",
+  borderRadius: 25,
+  width: 50,
+  height: 50,
+  textAlign: "center",
+  textAlignVertical: "center",
+  fontWeight: "bold",
+  
+  },
+  thirdNumber: {
+  backgroundColor:'#B5942C',
+  fontSize: 30,
+  color:"#FBC528",
+  borderRadius: 25,
+  width: 50,
+  height: 50,
+  textAlign: "center",
+  textAlignVertical: "center",
+  fontWeight: "bold",
   },
 });
