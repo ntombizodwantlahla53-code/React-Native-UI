@@ -28,7 +28,15 @@ export function Apptabs() {
                 <FontAwesome5 style={styles.basket} name="shopping-basket" size={20} color="black"/>
               </View>
         </View>
+        <View style={styles.subtitle}>
+          <Text style={styles.relax}>
+            <MaterialCommunityIcons name="leaf-circle-outline" size={24} color="black" />
+            Relax</Text>
 
+         <Text style={styles.sleep}>
+          <Octicons style={styles.sleep} name="moon" size={24} color="black" />
+          Sleep</Text>
+          </View>
         </View>
       </ImageBackground>
     </View>
@@ -96,5 +104,23 @@ rightSide: {
   textAlign: "center",
   textAlignVertical: "center",
   fontWeight: "bold",
+  },
+    subtitle: {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 15,
+  marginTop: 30,
+  gap:50,
+  margin:15
+},
+  relax: {
+    fontFamily: "PlusJakartaSans_700Bold",
+    fontSize: 20,
+  },
+  sleep: {
+   color: '#94781c',
+  fontFamily: "PlusJakartaSans_700Bold",
+    fontWeight:"bold",
+    fontSize: 20,
   },
 });
