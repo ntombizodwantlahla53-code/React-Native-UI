@@ -94,7 +94,7 @@ rightSide: {
   gap: 15,
 },
   user:{
-    backgroundColor: '#B5942C',
+    backgroundColor:"#c29305",
   borderRadius: 25,
   width: 50,
   height: 50,
