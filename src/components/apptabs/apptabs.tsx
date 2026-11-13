@@ -1,7 +1,7 @@
 import { ImageBackground, StyleSheet, Text, View, Pressable } from "react-native";
 import { useState } from 'react';
 // import { MdOutlineArrowBackIos } from "react-icons/md";
-import Entypo from '@expo/vector-icons/Entypo';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Octicons from '@expo/vector-icons/Octicons';
@@ -22,7 +22,7 @@ export function Apptabs() {
      <View style={styles.overlay}>
           <View style={styles.headerRow}>
                 <View style={styles.leftSide}>
-                  <Entypo style={styles.back} name="chevron-left" size={29} color="black" />
+                  <MaterialIcons style={styles.back} name="keyboard-arrow-left" size={35} color="black" />
                   <Ionicons name="aperture-outline" size={45} color="black" />
                   <Text style={styles.title}>xefag </Text>
                 </View>
@@ -105,7 +105,6 @@ leftSide: {
   height: 50,
   textAlign: "center",
   textAlignVertical: "center",
-  fontWeight: "bold",
   },
     title: {
     fontFamily: "PlusJakartaSans_700Bold",
