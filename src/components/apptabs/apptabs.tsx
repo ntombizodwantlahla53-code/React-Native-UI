@@ -205,5 +205,6 @@ fontSize: 30,
     marginLeft: 35,
     textAlign: "center",
     textAlignVertical: "center",
+    fontWeight:"600"
   }
 });
