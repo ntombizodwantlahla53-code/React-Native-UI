@@ -18,7 +18,7 @@ export function card() {
         </View>     
       </View>
       <TouchableOpacity style={styles.buyNowBtn} activeOpacity={0.8}>
-        <Text style={styles.buyNowText}>Buy Now</Text>
+        <Text style={styles.buyNowText}><AntDesign name="aliyun" size={24} color="black" /> Buy Now</Text>
       </TouchableOpacity>
     </View>
   );
@@ -31,19 +31,19 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   title: {
-    fontFamily: "PlusJakartaSans_700Bold",
-    fontWeight: "bold",
+    fontWeight: "600",
     color: "#111111",
     fontSize: 40,
     padding: 28,
 
   },
   mg: {
-    fontFamily: "PlusJakartaSans_700Bold",
+    fontFamily: "PlusJakartaSans",
     color: "#96877c",
-    fontSize: 20,
+    fontSize: 21,
     padding:28,
     marginTop:-40,
+    fontWeight:"400"
   },
   price: {
     fontFamily: "PlusJakartaSans_700Bold",
