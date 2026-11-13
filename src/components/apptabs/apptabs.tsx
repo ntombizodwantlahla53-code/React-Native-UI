@@ -52,19 +52,19 @@ export function Apptabs() {
                <View style={styles.numbersContainer}>
                 <Pressable
                 onPress={() => setNumber(number === '30' ? null : '30')}
-                style={[styles.firstNumber, { backgroundColor: number === '30' ? 'black' : '#B5942C', }]}>
+                style={[styles.firstNumber, { backgroundColor: number === '30' ? 'black' : '#b39125', }]}>
                   <Text style={styles.firstNumber}>30</Text> 
                 </Pressable>
 
                  <Pressable
                 onPress={() => setNumber(number === '60' ? null : '60')}
-                style={[styles.secondNumber, { backgroundColor: number === '60' ? 'black' : '#B5942C', }]}>
+                style={[styles.secondNumber, { backgroundColor: number === '60' ? 'black' : '#b39125', }]}>
                   <Text style={styles.secondNumber}>60</Text>
                 </Pressable>
 
                   <Pressable
                 onPress={() => setNumber(number === '90' ? null : '90')}
-                style={[styles.thirdNumber, { backgroundColor: number === '90' ? 'black' : '#B5942C', }]}>
+                style={[styles.thirdNumber, { backgroundColor: number === '90' ? 'black' : '#b39125', }]}>
                   <Text style={styles.thirdNumber}>90</Text>
                 </Pressable>
                   
@@ -149,7 +149,7 @@ rightSide: {
     fontSize: 20,
   },
   sleep: {
-   color: '#94781c',
+   color: '#8b6f12',
   fontFamily: "PlusJakartaSans_700Bold",
     fontWeight:"bold",
     fontSize: 20,
