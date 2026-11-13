@@ -1,4 +1,5 @@
-import { ImageBackground, StyleSheet, Text, View, Button } from "react-native";
+import { ImageBackground, StyleSheet, Text, View, Pressable } from "react-native";
+import { useState } from 'react';
 // import { MdOutlineArrowBackIos } from "react-icons/md";
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
@@ -9,6 +10,7 @@ import * as Jakarta from "@expo-google-fonts/plus-jakarta-sans";
 
 
 export function Apptabs() {
+    const [icon, setIcon] = useState<'user' | 'basket' | null>(null);
   const [loaded] = Jakarta.useFonts(Jakarta);
   return (
     <View style={styles.container}>
@@ -24,8 +26,16 @@ export function Apptabs() {
                   <Text style={styles.title}>xefag </Text>
                 </View>
                <View style={styles.rightSide}>
-                <FontAwesome5 style={styles.user} name="user" size={20} color="white" />
-                <FontAwesome5 style={styles.basket} name="shopping-basket" size={20} color="black"/>
+             <Pressable
+                onPress={() => setIcon(icon === 'user' ? null : 'user')}
+                style={[styles.user, { backgroundColor: icon === 'user' ? 'white' : "#c29305", }]}>
+                <FontAwesome5 style={styles.user} name="user" size={20} color={icon === 'user' ? 'black' : 'white'} />
+              </Pressable>
+              <Pressable
+                onPress={() => setIcon(icon === 'basket' ? null : 'basket')}
+                style={[styles.basket, { backgroundColor: icon === 'basket' ? 'white' : "#c29305", }]}>
+                <FontAwesome5 style={styles.basket} name="shopping-basket" size={20} color={icon === 'basket' ? 'black' : 'white'} />
+              </Pressable>
               </View>
           </View>
           <View style={styles.subtitle}>
@@ -94,7 +104,7 @@ rightSide: {
   gap: 15,
 },
   user:{
-    backgroundColor:"#c29305",
+   
   borderRadius: 25,
   width: 50,
   height: 50,
@@ -103,7 +113,6 @@ rightSide: {
   fontWeight: "bold",
   },
   basket:{
-    backgroundColor: "white",
   borderRadius: 25,
   width: 50,
   height: 50,
