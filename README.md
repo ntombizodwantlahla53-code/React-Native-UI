@@ -1,4 +1,6 @@
-# Welcome to your Expo app 👋
+# Welcome to your REACT-NATIVE-UI for Pharmarcy👋
+
+<img src="https://socialify.git.ci/ntombizodwantlahla53-code/React-Native-UI/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="React-Native-UI" width="640" height="320" />
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 

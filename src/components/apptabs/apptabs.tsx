@@ -36,6 +36,7 @@ export function Apptabs() {
                 onPress={() => setIcon(icon === 'basket' ? null : 'basket')}
                 style={[styles.basket, { backgroundColor: icon === 'basket' ? 'white' : "#c29305", }]}>
                 <FontAwesome5 style={styles.basket} name="shopping-basket" size={20} color={icon === 'basket' ? 'black' : 'white'} />
+                <Text style={styles.items}>3</Text>
               </Pressable>
               </View>
           </View>
@@ -193,4 +194,16 @@ fontSize: 30,
   textAlignVertical: "center",
   fontWeight: "bold",
   },
+  items:{
+    backgroundColor:"black",
+    color: "white",
+    borderRadius: 25,
+    height: 15,
+    width:15,
+    fontSize: 15,
+    marginTop: -50,
+    marginLeft: 35,
+    textAlign: "center",
+    textAlignVertical: "center",
+  }
 });
