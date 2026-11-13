@@ -11,6 +11,7 @@ import * as Jakarta from "@expo-google-fonts/plus-jakarta-sans";
 
 export function Apptabs() {
     const [icon, setIcon] = useState<'user' | 'basket' | null>(null);
+    const [number, setNumber] = useState<'30' | '60' | '90'| null>(null);
   const [loaded] = Jakarta.useFonts(Jakarta);
   return (
     <View style={styles.container}>
@@ -39,7 +40,7 @@ export function Apptabs() {
               </View>
           </View>
           <View style={styles.subtitle}>
-            <Text style={styles.relax}>
+            <Text style={styles.relax} >
               <MaterialCommunityIcons name="leaf-circle-outline" size={24} color="black" />
               Relax
             </Text>
@@ -49,9 +50,24 @@ export function Apptabs() {
               </Text>
           </View>
                <View style={styles.numbersContainer}>
-                  <Text style={styles.firstNumber}>30</Text>
+                <Pressable
+                onPress={() => setNumber(number === '30' ? null : '30')}
+                style={[styles.firstNumber, { backgroundColor: number === '30' ? 'black' : '#B5942C', }]}>
+                  <Text style={styles.firstNumber}>30</Text> 
+                </Pressable>
+
+                 <Pressable
+                onPress={() => setNumber(number === '60' ? null : '60')}
+                style={[styles.secondNumber, { backgroundColor: number === '60' ? 'black' : '#B5942C', }]}>
                   <Text style={styles.secondNumber}>60</Text>
+                </Pressable>
+
+                  <Pressable
+                onPress={() => setNumber(number === '90' ? null : '90')}
+                style={[styles.thirdNumber, { backgroundColor: number === '90' ? 'black' : '#B5942C', }]}>
                   <Text style={styles.thirdNumber}>90</Text>
+                </Pressable>
+                  
               </View>
      </View>
       </ImageBackground>
@@ -148,9 +164,7 @@ rightSide: {
   },
   firstNumber: {
     fontSize: 30,
-  backgroundColor: "black",
   color:"#FBC528",
-  borderWidth: 1,
   borderRadius: 25,
   width: 50,
   height: 50,
@@ -159,7 +173,6 @@ rightSide: {
   fontWeight: "bold",
   },
   secondNumber: {
-  backgroundColor:'#B5942C',
 fontSize: 30,
   color:"#FBC528",
   borderRadius: 25,
@@ -171,7 +184,6 @@ fontSize: 30,
   
   },
   thirdNumber: {
-  backgroundColor:'#B5942C',
   fontSize: 30,
   color:"#FBC528",
   borderRadius: 25,
